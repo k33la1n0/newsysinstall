@@ -54,7 +54,11 @@ echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        sudo apt install r-base python3-pip codium arduino -y;;
+        sudo add-apt-repository ppa:deadsnakes/ppa
+        sudo apt update
+        sudo apt install python3.10
+        sudo apt install r-base python3-pip codium arduino -y
+        ;;
     n|no|N|2)
         exit;;
 esac
