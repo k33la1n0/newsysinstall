@@ -34,7 +34,7 @@ echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        sudo apt install emacs keepassxc freecad htop -y;;
+        sudo apt install nheko emacs keepassxc freecad htop -y;;
     n|no|N|2)
         exit;;
 esac
@@ -97,8 +97,9 @@ echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        wget --content-disposition https://mullvad.net/download/app/deb/latest && sudo apt-get install gdebi-core -y && sudo gdebi MullvadVPN*amd64.deb -y;;
-
+        wget --content-disposition https://mullvad.net/download/app/deb/latest && sudo apt-get install gdebi-core -y && sudo gdebi MullvadVPN*amd64.deb -y
+	wget --content-disposition https://releases.threema.ch/web-electron/v1/release/Threema-Latest.deb && sudo gdebi Threema-Latest.deb -y
+	;;
     n|no|N|2)
         exit;;
 esac
