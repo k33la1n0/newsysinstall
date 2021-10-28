@@ -9,6 +9,7 @@ echo "!          ==               ==         !"
 echo "!           =================          !"
 echo "!                                      !"
 echo "----------------------------------------"
+echo "! audacity shotcut gimp inkscape vlc   !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
@@ -29,12 +30,12 @@ echo "!          ==               ==         !"
 echo "!           =================          !"
 echo "!                                      !"
 echo "----------------------------------------"
-echo ""
+echo "! nheko emacs keepass freecad htop git !"
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        sudo apt install nheko emacs keepassxc freecad htop -y;;
+        sudo apt install nheko emacs keepassxc freecad htop git -y;;
     n|no|N|2)
         exit;;
 esac
@@ -49,6 +50,7 @@ echo "!          ===================         !"
 echo "!           =================          !"
 echo "!                                      !"
 echo "----------------------------------------"
+echo "! r-base python3.10/pip codium arduino !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
@@ -74,6 +76,7 @@ echo "!                 =       =            !"
 echo "!                 =========            !"
 echo "!                                      !"
 echo "----------------------------------------"
+echo "! rocket.chat			     !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
@@ -96,13 +99,14 @@ echo "!              .==.  .==.              !"
 echo "!             =-   ==   -=             !"
 echo "!                                      !"
 echo "----------------------------------------"
+echo "! mullvad threema			     !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
         wget --content-disposition https://mullvad.net/download/app/deb/latest && sudo apt-get install gdebi-core -y && sudo gdebi MullvadVPN*amd64.deb
-	wget --content-disposition https://releases.threema.ch/web-electron/v1/release/Threema-Latest.deb && sudo gdebi Threema-Latest.deb
+        wget --content-disposition https://releases.threema.ch/web-electron/v1/release/Threema-Latest.deb && sudo gdebi Threema-Latest.deb
 	;;
     n|no|N|2)
         exit;;
@@ -119,6 +123,7 @@ echo "!                                      !"
 echo "!               ========               !"
 echo "!                                      !"
 echo "----------------------------------------"
+echo "! k33la1n0 github repro		     !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
