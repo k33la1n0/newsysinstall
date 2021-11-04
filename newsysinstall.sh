@@ -1,5 +1,5 @@
 #/bin/bash
-echo "Hi l!V, I want to install some stuff    "
+echo "Hi" $USER", I want to install some stuff!"
 echo "----------------------------------------"
 echo "!                                      !"
 echo "!    ++++                       ++++   !"
@@ -20,7 +20,7 @@ case $ans in
         exit;;
 esac
 ###############################################
-echo "Uhhh l!V, here are more, more, more     "
+echo "Uhhh "$USER", here are more, more, more ..."
 echo "----------------------------------------"
 echo "!                                      !"
 echo "!    +  +                       +  +   !"
