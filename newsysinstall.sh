@@ -9,7 +9,9 @@ echo "!          ==               ==         !"
 echo "!           =================          !"
 echo "!                                      !"
 echo "----------------------------------------"
-echo "! audacity shotcut gimp inkscape vlc   !"
+echo "! audacity shotcut gimp                !"
+echo "! inkscape vlc krita                   !"
+echo "! lutris                               !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
@@ -30,12 +32,15 @@ echo "!          ==               ==         !"
 echo "!           =================          !"
 echo "!                                      !"
 echo "----------------------------------------"
-echo "! nheko emacs keepass freecad htop git !"
+echo "! remmina emacs keepass freecad        !"
+echo "! htop git spyder3                     !"
+echo "! qgis nodejs
+echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        sudo apt install nheko emacs keepassxc freecad htop git -y;;
+        sudo apt install remmina emacs keepassxc freecad htop git spyder3 qgis nodejs -y;;
     n|no|N|2)
         exit;;
 esac
@@ -50,7 +55,8 @@ echo "!          ===================         !"
 echo "!           =================          !"
 echo "!                                      !"
 echo "----------------------------------------"
-echo "! r-base python3.10/pip codium arduino !"
+echo "! r-base python3.10 python3-pip        !"
+echo "! python3-dev codium arduino           !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
@@ -59,7 +65,7 @@ case $ans in
         sudo add-apt-repository ppa:deadsnakes/ppa
         sudo apt update
         sudo apt install python3.10
-        sudo apt install r-base python3-pip codium arduino -y
+        sudo apt install r-base python3-pip python3-dev codium arduino -y
         ;;
     n|no|N|2)
         exit;;
@@ -83,7 +89,6 @@ read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
         flatpak install chat.rocket.RocketChat/x86_64/stable;;
-        
     n|no|N|2)
         exit;;
 esac
@@ -149,6 +154,26 @@ case $ans in
         git clone https://github.com/k33la1n0/xmpp
 	sudo chmod +x ~/bin/xmpp/xampp-start.sh
 	sudo chmod +x ~/bin/xmpp/xampp-stop.sh
+	echo "--------------"
+	echo "Installation von Jupyter Notebook"
+	echo "--------------"
+	sudo -H pip3 install --upgrade pip
+	sudo -H pip3 install virtualenv	
+	mkdir notebook
+	cd ~/bin/notebook
+	virtualenv jupyterenv
+	source jupyterenv/bin/activate
+	pip install jupyter
+	pip install nbconvert
+	echo "--------------"
+	echo "Um jupyter zu starten ->"
+	echo "eingabe im Terminal:"
+	echo "jupyter notebook"
+	echo "--------------"
+	echo ""
+	echo "Browser-Eingabe ->"
+	echo "localhost:8888"
+	echo "--------------"
         ;;
     n|no|N|2)
         exit;;
