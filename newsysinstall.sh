@@ -34,7 +34,7 @@ echo "!                                      !"
 echo "----------------------------------------"
 echo "! remmina emacs keepass freecad        !"
 echo "! htop git spyder3                     !"
-echo "! qgis nodejs
+echo "! qgis nodejs                          !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
@@ -157,24 +157,18 @@ case $ans in
 	echo "--------------"
 	echo "Installation von Jupyter Notebook"
 	echo "--------------"
-	sudo -H pip3 install --upgrade pip
-	sudo -H pip3 install virtualenv	
-	mkdir notebook
-	cd ~/bin/notebook
-	virtualenv jupyterenv
-	source jupyterenv/bin/activate
-	pip install jupyter
-	pip install nbconvert
+	sudo apt install jupyter-core jupyter-notebook
 	echo "--------------"
 	echo "Um jupyter zu starten ->"
 	echo "eingabe im Terminal:"
 	echo "jupyter notebook"
-	echo "--------------"
 	echo ""
+	echo "--------------"
 	echo "Browser-Eingabe ->"
 	echo "localhost:8888"
+	echo ""
 	echo "--------------"
         ;;
-    n|no|N|2)
+    n|no|N|2)y
         exit;;
 esac
