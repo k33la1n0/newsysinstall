@@ -90,6 +90,7 @@ case $ans in
         flatpak install chat.rocket.RocketChat
 	flatpak install org.signal.Signal
 	flatpak install im.riot.Riot
+	flatpak install org.gajim.Gajim
 	;;
     n|no|N|2)
         exit;;
