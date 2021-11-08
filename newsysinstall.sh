@@ -82,7 +82,7 @@ echo "!                 =========            !"
 echo "!                                      !"
 echo "----------------------------------------"
 echo "! rocket.chat signal                   !"
-echo "! element gajim                        !"
+echo "! element gajim discord                !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
@@ -92,6 +92,7 @@ case $ans in
 	flatpak install org.signal.Signal
 	flatpak install im.riot.Riot
 	flatpak install org.gajim.Gajim
+	flatpak install com.discordapp.Discord
 	;;
     n|no|N|2)
         exit;;
