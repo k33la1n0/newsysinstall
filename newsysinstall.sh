@@ -87,8 +87,9 @@ echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        flatpak install chat.rocket.RocketChat/x86_64/stable
+        flatpak install chat.rocket.RocketChat
 	flatpak install org.signal.Signal
+	flatpak install im.riot.Riot
 	;;
     n|no|N|2)
         exit;;
