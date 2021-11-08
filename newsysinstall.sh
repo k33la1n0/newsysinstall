@@ -82,6 +82,7 @@ echo "!                 =========            !"
 echo "!                                      !"
 echo "----------------------------------------"
 echo "! rocket.chat signal                   !"
+echo "! element gajim                        !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
