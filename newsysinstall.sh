@@ -62,7 +62,6 @@ echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        sudo add-apt-repository ppa:deadsnakes/ppa
         sudo apt update
         sudo apt install python3.10
         sudo apt install r-base python3-pip python3-dev codium arduino -y
@@ -82,13 +81,15 @@ echo "!                 =       =            !"
 echo "!                 =========            !"
 echo "!                                      !"
 echo "----------------------------------------"
-echo "! rocket.chat			     !"
+echo "! rocket.chat signal                   !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        flatpak install chat.rocket.RocketChat/x86_64/stable;;
+        flatpak install chat.rocket.RocketChat/x86_64/stable
+	flatpak install org.signal.Signal
+	;;
     n|no|N|2)
         exit;;
 esac
