@@ -11,13 +11,13 @@ echo "!                                      !"
 echo "----------------------------------------"
 echo "! audacity shotcut gimp                !"
 echo "! inkscape vlc krita                   !"
-echo "! lutris                               !"
+echo "! gscan2pdf pdftk img2pdf lutris       !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        sudo apt install audacity shotcut gimp inkscape vlc -y;;
+        sudo apt install audacity shotcut gimp inkscape vlc krita gscan2pdf pdftk img2pdf lutris -y;;
     n|no|N|2)
         exit;;
 esac
