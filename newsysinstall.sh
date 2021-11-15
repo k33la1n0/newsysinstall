@@ -10,14 +10,14 @@ echo "!           =================          !"
 echo "!                                      !"
 echo "----------------------------------------"
 echo "! audacity shotcut gimp                !"
-echo "! inkscape vlc krita                   !"
+echo "! inkscape vlc krita peek              !"
 echo "! gscan2pdf pdftk img2pdf lutris       !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        sudo apt install audacity shotcut gimp inkscape vlc krita gscan2pdf pdftk img2pdf lutris -y;;
+        sudo apt install audacity shotcut gimp inkscape vlc krita peek gscan2pdf pdftk img2pdf lutris -y;;
     n|no|N|2)
         exit;;
 esac
@@ -33,14 +33,14 @@ echo "!           =================          !"
 echo "!                                      !"
 echo "----------------------------------------"
 echo "! remmina emacs keepass freecad        !"
-echo "! htop git spyder3                     !"
-echo "! qgis nodejs                          !"
+echo "! htop git spyder3 qgis                !"
+echo "! nodejs exa jackd qjackctl            !"
 echo ""
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
     y|yes|Y|1)
-        sudo apt install remmina emacs keepassxc freecad htop git spyder3 qgis nodejs -y;;
+        sudo apt install remmina emacs keepassxc freecad htop git spyder3 qgis nodejs jackd qjackctl -y;;
     n|no|N|2)
         exit;;
 esac
